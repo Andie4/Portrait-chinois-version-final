@@ -1,0 +1,354 @@
+*, * ::before, * ::after {
+    box-sizing: border-box;
+    margin: 0;
+    /*modification du calcul des dimensions des boites*/
+    /*https://medium.com/prod-io/box-sizing-make-your-css-hassle-free-6455adde0ed6*/
+}
+@media(width:800px){
+    h1{
+        font-size: 1em;
+    }
+}
+/*ajouter le grain sur toute la page*/
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    padding: 0 10%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+body {
+    margin: 0;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2rem;
+    
+}
+
+.logo {
+    color: #77b1d3;
+}
+
+.boutons {
+    text-decoration: none;
+    color: #000000;
+    transition: 0.5s;
+    padding: 8px 16px;
+    background-color: #77b1d3;
+    border-radius: 10px;
+}
+.boutons:hover {
+background-color: white;
+}
+
+/* div accueil */
+.home {
+    background-size: cover;
+    background-position: center;
+    background-image: url("images/aquarelle_bleue.jpg");
+    display: flex;
+    /* flex  nous sera utile pour centrer horizontalement et verticalement l'enfant h1 et a */
+    flex-direction: column;
+    /* permet de changer le sens des éléments en vertical car flex place naturellement sur la même ligne */
+    justify-content: center;
+    /* aligne les éléments sur l'axe vertical */
+    align-items: center;
+    /* aligne les éléments sur l'axe horizontal */
+    gap: 24px;
+    /* espace entre les éléments */
+    height: 100vh;
+}
+
+h1 {
+    font-size: 5em;
+    margin: 0;
+    font-weight: bold;
+    -webkit-text-stroke-width: 0.05px;
+    -webkit-text-stroke-color: #77b1d3;
+}
+
+h2 {
+    color:white;
+}
+
+
+
+
+/* bouton en voir plus */
+.btnSP {
+    background-color: black;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: 200;
+    border-radius: 5px;
+    padding: 16px 24px;
+}
+
+/* au survol du bouton */
+.btnSP:hover {
+    background-color: #77b1d3;
+}
+
+/* flèches vers le bas */
+.imgSlide{
+    
+    position: relative;
+    top: 90%;
+    right: 750px;
+    width: 35px;
+}
+
+.imgSlide:hover{
+    background-color: chocolate;
+    border-radius: 50px;
+}
+
+
+/* background de chaque div */
+.un {
+    background: linear-gradient(70deg, rgb(0, 157, 255), rgb(192, 229, 255));
+}
+
+.deux {
+    background: linear-gradient(70deg, rgb(192, 229, 255), rgb(0, 157, 255));
+}
+
+.trois {
+    background: linear-gradient(70deg, rgb(0, 157, 255), rgb(192, 229, 255));
+}
+
+.quatre {
+    background: linear-gradient(70deg, rgb(192, 229, 255), rgb(0, 157, 255));
+}
+
+.cinq {
+    background: linear-gradient(70deg, rgb(0, 157, 255), rgb(192, 229, 255))
+}
+
+.six {
+    background: linear-gradient(70deg, rgb(192, 229, 255), rgb(0, 157, 255));
+}
+
+.sept {
+    background: linear-gradient(70deg, rgb(0, 157, 255), rgb(192, 229, 255));
+}
+
+.huit {
+    background: linear-gradient(70deg, rgb(192, 229, 255), rgb(0, 157, 255));
+}
+
+
+
+/* positionnement des éléments de chacune des div */
+.container {
+    display: flex;
+    gap: 64px;
+    height: 100vh;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+h3 {
+    margin: 0;
+    font-size: 5em;
+    color: #000000;
+}
+
+.justification {
+    width: 50%;
+    font-size: 1em;
+}
+
+img {
+    width: 600px;
+    height: auto;
+    
+}
+
+
+/* fond bleu du formulaire */ 
+form {
+    display: flex;
+    flex-direction: column;
+    color: black;
+    background-color: #77b1d3 ;
+    border-radius: 15px;
+    width: 400px;
+    height: 700px;
+    padding: 56px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+h4 {
+    font-size: 2em;
+    margin: 0;
+    font-weight: bold;
+    text-align: center;
+}
+
+label {
+    font-size: 1.5em;
+}
+
+input {
+    padding: 10px;
+    border-radius: 4px;
+    color: #ed8f6d;
+    background-color: #c7e6f8;
+}
+.arg{
+    padding: 10px;
+    border-radius: 4px;
+    color: #ed8f6d;
+    background-color: #c7e6f8;
+}
+
+
+
+
+
+/* scrollbar   */
+body::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: rgb(255, 255, 255);
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #77b1d3;
+    border-radius: 20px;
+    height: 150px;
+  }
+  
+
+
+
+
+/* texte qui clignote   */
+ .clignote:nth-child(odd) {
+    color: #ed8f6d;
+    font-size: 40px;
+    animation: clignote 2s linear infinite;
+    text-align: center;
+    
+}
+@keyframes clignote {  
+    50% { opacity: 0.1; }
+}
+
+/* Formulaire forme  */ 
+form{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type="submit"]{
+    border: none;
+    color:rgb(255, 255, 255);
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 50px;
+    color: black;
+
+}
+input:hover{
+    color: white;
+    background-color: #ed8f6d;
+
+}
+
+input{
+    width: 300px;
+    height: 35px;
+}
+
+.arg:hover{
+    color: white;
+    background-color: #ed8f6d;
+}
+
+
+.btnTop{
+    color: white;
+    background-color: rgb(0, 0, 0);
+    margin-bottom: 100px;
+    border-radius: 4px;
+    padding: 8px;
+    text-decoration: none;
+    margin-left: 1000px;
+    cursor: pointer;
+}
+
+.btnTop:hover{
+    background-color: #77b1d3;
+    color: black;
+}
+  
+
+
+ /*mentions */
+footer{
+    background-color: gray;
+    color: white;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    padding: 15px;
+    
+}
+
+.mentions{
+    display: none;
+    position: absolute;
+    background-color: black;
+    color: white;
+    padding: 100px;
+    bottom: 140px;
+    left: 54.6%;
+    margin-left: -280px;
+    border-radius: 25px;
+
+}
+
+.mentions p {
+    margin: 5px 0;
+}
+
+.close-btn {
+    position: absolute;
+    top: 19px;
+    left: 17px;
+    font-size: 20px;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: grey;
+}
+
+    
+     
